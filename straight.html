@@ -138,7 +138,7 @@ var svg = d3.select("body")
               "translate(" + margin.left + "," + margin.top + ")");
 var data;
 //// Get the data
-d3.json("data.json", function(error, json) {
+d3.json("people.json", function(error, json) {
   console.log(json)
  
   json.forEach(function(d) {
@@ -151,12 +151,12 @@ d3.json("data.json", function(error, json) {
 				var sect = document.getElementById("inds");
 				var section = sect.options[sect.selectedIndex].value;
 
-				data = filterJSON(json, 'age group', section);
+				people = filterJSON(json, 'age group', section);
 
 	      
 	      //debugger
 	      
-		    data.forEach(function(d) {
+		    people.forEach(function(d) {
     			d.value = +d.value;
     			//d.year = +d.year;
     			//d.year = parseDate.parse(d.year);
@@ -165,43 +165,43 @@ d3.json("data.json", function(error, json) {
     		
 		    
 		    //debugger
-				updateGraph(data);
+				updateGraph(people);
 
 
 				jQuery('h1.page-header').html(section);
 			});
 
 	// generate initial graph
-	data = filterJSON(json, 'age group', '00 to 05');
-	updateGraph(data);
+	people = filterJSON(json, 'age group', '00 to 05');
+	updateGraph(people);
 
 });
 
 var color = d3.scale.ordinal().range(["#FF00FF",  "#808080", "#FF0000","#006400","#0000FF"]);
 
-function updateGraph(data) {
+function updateGraph(people) {
     
 
     // Scale the range of the data
-    //x.domain(d3.extent(data, function (d) { return new Date(parseInt(d.year),0); }));
-   	x.domain(d3.extent(data, function(d) { return d.year;}));
-    y.domain([d3.min(data, function(d) { return d.value; }), d3.max(data, function(d) { return d.value; })]);
+    //x.domain(d3.extent(people, function (d) { return new Date(parseInt(d.year),0); }));
+   	x.domain(d3.extent(people, function(d) { return d.year;}));
+    y.domain([d3.min(people, function(d) { return d.value; }), d3.max(people, function(d) { return d.value; })]);
 
 //console.log(d.year)
     // Nest the entries by race
-    dataNest = d3.nest()
+    peopleNest = d3.nest()
         .key(function(d) {return d.race;})
-        .entries(data);
+        .entries(people);
 
 
- 		var result = dataNest.filter(function(val,idx, arr){
+ 		var result = peopleNest.filter(function(val,idx, arr){
 				  return $("." + val.key).attr("fill") != "#ccc" 
 				  // matching the data with selector status
 				})
 				
 				
  		var race = svg.selectAll(".line")
-      .data(result, function(d){return d.key});
+      .people(result, function(d){return d.key});
 
 		race.enter().append("path")
 			.attr("class", "line");
@@ -218,7 +218,7 @@ function updateGraph(data) {
 
 		var legend = d3.select("#legend")
 			.selectAll("text")
-			.data(dataNest, function(d){return d.key});
+			.people(peopleNest, function(d){return d.key});
 
 		//checkboxes
 		legend.enter().append("rect")
@@ -243,13 +243,13 @@ function updateGraph(data) {
 			  })
 			  
 			  
-			 var result = dataNest.filter(function(val,idx, arr){
+			 var result = peopleNest.filter(function(val,idx, arr){
          return $("." + val.key).attr("fill") != "#ccc" 
        // matching the data with selector status
       })
       
        // Hide or show the lines based on the ID
-       svg.selectAll(".line").data(result, function(d){return d.key})
+       svg.selectAll(".line").people(result, function(d){return d.key})
          .enter()
          .append("path")
          .attr("class", "line")
@@ -258,7 +258,7 @@ function updateGraph(data) {
                 return raceline(d.values);
          });
  
-      svg.selectAll(".line").data(result, function(d){return d.key}).exit().remove()  
+      svg.selectAll(".line").people(result, function(d){return d.key}).exit().remove()  
 					
 			})
 		        
