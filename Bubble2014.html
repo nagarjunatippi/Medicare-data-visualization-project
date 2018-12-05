@@ -109,12 +109,12 @@
                  * */
                 .on("click", function(d) {
                     onHoverInfoBox.html("<b>"+d.county+"<br/>"+"No of dollar claims:" +d["TOTAL DOLLAR AMOUNT OF CLAIMS"]
-                        +"<br/>"+"<u>"+"Top 5 Employers"+"</u>"+"<br/>"
-                        +d["employer_name1"]+": "+d["count1"]
-                        +"<br>"+d["employer_name2"]+": "+d["count2"]+"<br>"+
-                        d["employer_name3"]+": "+d["count3"]+"<br>"+
-                        d["employer_name4"]+": "+d["count4"]+"<br>"+
-                        d["employer_name5"]+": "+d["count5"]+"</b>");
+                        +"<br/>"+"<u>"+"Top 5 Race"+"</u>"+"<br/>"
+                        +d[" "]+": "+d[" "]
+                        +"<br>"+d[" "]+": "+d[" "]+"<br>"+
+                        d[" "]+": "+d[" "]+"<br>"+
+                        d[" "]+": "+d[" "]+"<br>"+
+                        d[" "]+": "+d[" "]+"</b>");
                     //returns above retrieved info
                     return onHoverInfoBox.style("background-color", "#8bcf99")
                         .style("border-radius", "8px")
