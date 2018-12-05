@@ -1,0 +1,1853 @@
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+.container {
+    display: inline-block;
+}
+</style>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src = "https://code.highcharts.com/highcharts.js"></script>
+		<script src = "https://code.highcharts.com/modules/data.js"></script>
+		<script src = "https://code.highcharts.com/modules/drilldown.js"></script>
+		<script src="http://code.highcharts.com/modules/exporting.js"></script>
+		<span style="display:inline-block; width:520px; height:90px;"></span>
+		<select id="chartType">
+			  <<option value="0">-select county-</option>
+			  <option value="Adams">Adams</option>
+			  <option value="Allen">Allen</option>
+			  <option value="Bartholomew">Bartholomew</option>
+			  <option value="Benton">Benton</option>
+			  <option value="Blackford"> Blackford </option>
+			  <option value="Boone">Boone</option>
+			  <option value="Brown">Brown</option>
+			  <option value="Carroll">Carroll</option>
+			  <option value="Cass">Cass</option>
+			  <option value="Clark">Clark</option>
+               <option value="Clay">Clay</option>
+			  <option value="Clinton">Clinton</option>
+			  <option value="Crawford">Crawford</option>
+			  <option value="Daviess">Daviess</option>
+			  <option value="Dearborn">Dearborn</option>
+			  <option value="Decatur">Decatur</option>
+			  <option value="DeKalb">DeKalb</option>
+			  <option value="Delaware">Delaware</option>
+			  <option value="Dubois">Dubois</option>
+			  <option value="Elkhart">Elkhart</option>
+			  <option value="Fayette">Fayette</option>
+			  <option value="Floyd">Floyd</option>
+			  <option value="Fountain">Fountain</option>
+			  <option value="Franklin">Franklin</option>
+			  <option value="Fulton">Fulton</option>
+			  <option value="Gibson">Gibson</option>
+			  <option value="Grant">Grant</option>
+			  <option value="Greene">Greene</option>
+			  <option value="Hamilton">Hamilton</option>
+			  <option value="Hancock">Hancock</option>
+			  <option value="Harrison">Harrison</option>
+			  <option value="Hendricks">Hendricks</option>
+			  <option value="Henry">Henry</option>
+			  <option value="Howard">Howard</option>
+			  <option value="Huntington">Huntington</option>
+			  <option value="Jackson">Jackson</option>
+			  <option value="Jasper">Jasper</option>
+			  <option value="Jay">Jay</option>
+			  <option value="Jefferson">Jefferson</option>
+			  <option value="Jennings">Jennings</option>
+			  <option value="Johnson">Johnson</option>
+			  <option value="Knox">Knox</option>
+			  <option value="Kosciusko">Kosciusko</option>
+			  <option value="LaGrange">LaGrange</option>
+			  <option value="Lake">Lake</option>
+			  <option value="LaPorte">LaPorte</option>
+			  <option value="Lawrence">Lawrence</option>
+			  <option value="Madison">Madison</option>
+			  <option value="Marion">Marion</option>
+			  <option value="Marshall">Marshall</option>
+			  <option value="Martin"> Martin</option>
+			  <option value="Miami"> Miami</option>
+			  <option value="Monroe"> Monroe</option>
+			  <option value="Montgomery">Montgomery</option>
+			  <option value="Morgan">Morgan</option>
+			  <option value="Newton">Newton</option>
+			  <option value="Noble">Noble</option>
+			  <option value="Ohio">Ohio</option>
+			  <option value="Orange">Orange</option>
+			  <option value="Owen">Owen</option>
+			  <option value="Parke">Parke</option>
+			  <option value="Perry">Perry</option>
+			  <option value="Pike">Pike</option>
+			  <option value="Porter">Porter</option>
+			  <option value="Posey">Posey</option>
+			  <option value="Pulaski">Pulaski</option>
+			  <option value="Putnam">Putnam</option>
+			  <option value="Randolph">Randolph</option>
+			  <option value="Ripley">Ripley</option>
+			  <option value="Rush">Rush</option>
+			  <option value="Scott">Scott</option>
+			  <option value="Shelby">Shelby</option>
+			  <option value="Spencer">Spencer</option>
+			  <option value="St.Joseph">St. Joseph</option>
+			  <option value="Starke">Starke</option>
+			  <option value="Steuben">Steuben</option>
+			  <option value="Sullivan">Sullivan</option>
+			  <option value="Switzerland">Switzerland</option> 
+			  <option value="Tippecanoe">Tippecanoe</option>
+			  <option value="Tipton">Tipton</option>
+			  <option value="Union">Union</option>
+			  <option value="Vanderburgh">Vanderburgh</option>
+			  <option value="Vermillion">Vermillion</option>
+			  <option value="Vigo">Vigo</option>
+			  <option value="Wabash">Wabash</option>
+			  <option value="Warren">Warren</option>
+			  <option value="Warrick">Warrick</option>
+			  <option value="Washington">Washington</option>
+			  <option value="Wayne">Wayne</option>
+			  <option value="Wells">Wells</option>
+			  <option value="White">White</option>
+			  <option value="Whitley">Whitley</option>
+
+
+</select>
+		
+		
+<div>
+<div id="container1" class="container" style="min-width: 500px; max-width:380px; height: 500px; margin: -100 auto; x: 100px; y:40px;" class="ChartBox"></div>
+<pre id="Adams" style="display:none">Year,Male,Female
+			2012,1655,9176,
+			2013,18234,17890,
+			2014,21456,34567,
+			2015,9865,7891,
+			2016,42678,12345,</pre>
+<pre id="Allen" style="display:none">Year,Male,Female
+			2012,6535,9176,
+			2013,40123,13407,
+			2014,13394,12386,
+			2015,37132,39135,
+			2016,12344,13648,</pre>
+<pre id="Benton" style="display:none">Year,Male,Female
+			2012,46535,99176,
+			2013,12340,12407,
+			2014,21394,09386,
+			2015,12371,7395,
+			2016,4124,4480,</pre>
+<pre id="Bartholomew" style="display:none">Year,Male,Female
+			2012,96535,99176,
+			2013,12403,13407,
+			2014,9394,09386,
+			2015,13731,39125,
+			2016,14124,24408,</pre>
+<pre id="Blackford" style="display:none">Year,Male,Female
+			2012,9635,9976,
+			2013,13403,14127,
+			2014,13394,13860,
+			2015,37109,39587,
+			2016,21424,24418,</pre>
+<pre id="Boone" style="display:none">Year,Male,Female
+			2012,6535,9176,
+			2013,13403,13407,
+			2014,39409,13806,
+			2015,27091,39501,
+			2016,4214,14418,</pre>
+<pre id="Brown" style="display:none">Year,Male,Female
+			2012,16335,11176,
+			2013,4093,4017,
+			2014,39324,38216,
+			2015,31711,39125,
+			2016,41314,4138,</pre>
+<pre id="Cass" style="display:none">Year,Male,Female
+			2012,1635,9176,
+			2013,4003,42037,
+			2014,39144,36806,
+			2015,37109,39513,
+			2016,40134,121248,</pre>
+<pre id="Carroll" style="display:none">Year,Male,Female
+			2012,16535,19176,
+			2013,14203,65214,
+			2014,876689,31386,
+			2015,19876,7653,
+			2016,60987,12347,</pre>
+<pre id="Clark" style="display:none">Year,Male,Female
+			2012,80655,111176,
+			2013,89775,90899,
+			2014,14567,45689,
+			2015,89053,1246798,
+			2016,98639,688543</pre>
+<pre id="Clay" style="display:none">Year,Male,Female
+			2012,6535,9176,
+			2013,40133,23407,
+			2014,39654,14386,
+			2015,37114,13395,
+			2016,42446,24458,</pre>
+<pre id="Guam" style="display:none">Year,Male,Female
+			2012,6535,9976,
+			2013,24403,79407,
+			2014,63947,25386,
+			2015,43781,53985,
+			2016,74424,56448,</pre>
+<pre id="Clinton" style="display:none">Year,Male,Female
+			2012,8535,8976,
+			2013,9864,2507,
+			2014,39134,13386,
+			2015,13371,39315,
+			2016,43124,12448,</pre>
+<pre id="Decatur" style="display:none">Year,Male,Female
+			2012,6533,9762,
+			2013,40133,41307,
+			2014,39132,38136,
+			2015,33131,31335,
+			2016,194244,133448,</pre>
+<pre id="Crawford" style="display:none">Year,Male,Female
+			2012,6235,9761,
+			2013,21453,41407,
+			2014,39354,38356,
+			2015,84371,91493,
+			2016,413424,474148,</pre>
+<pre id="Daviess" style="display:none">Year,Male,Female
+			2012,16535,19176,
+			2013,31303,13407,
+			2014,39564,31386,
+			2015,93371,37595,
+			2016,257424,467448,,</pre>
+<pre id="Dearborn" style="display:none">Year,Male,Female
+			2012,46354,67976,
+			2013,40885,40667,
+			2014,59784,88786,
+			2015,95376,96535,
+			2016,89424,97548,</pre>
+<pre id="DeKalb" style="display:none">Year,Male,Femal
+			2012,24535,19176,
+			2013,41333,24347,
+			2014,39244,38136,
+			2015,24371,24395,
+			2016,42454,44138,</pre>
+<pre id="Delaware" style="display:none">Year,Male,Female
+			2012,6535,9176,
+			2013,24503,27407,
+			2014,53544,25386,
+			2015,25371,98395,
+			2016,42434,45748,</pre>
+<pre id="Dubois" style="display:none">Year,Male,Female
+			2012,16535,19176,
+			2013,25403,56407,
+			2014,39647,57386,
+			2015,367735,25365,
+			2016,36254,36748,</pre>
+<pre id="Elkhart" style="display:none">Year,Male,Female
+			2012,6515,8776,
+			2013,35403,74407,
+			2014,39534,36466,
+			2015,90635,73695,
+			2016,45774,356448,</pre>
+<pre id="Fayette" style="display:none">Year,Male,Female
+			2012,26535,49176,
+			2013,42403,23407,
+			2014,24394,57386,
+			2015,122471,397555,
+			2016,134424,44568,</pre>
+<pre id="Floyd" style="display:none">Year,Male,Female
+			2012,4635,9756,
+			2013,66543,64532,
+			2014,74432,64422,
+			2015,335461,135355,
+			2016,42854,44748,</pre>
+<pre id="Fountain" style="display:none">Year,Male,Female
+			2012,4535,4176,
+			2013,45036,22347,
+			2014,39564,35866,
+			2015,13455,13455,
+			2016,42524,41448,</pre>
+<pre id="Franklin" style="display:none">Year,Male,Female
+			2012,3635,6176,
+			2013,24043,40147,
+			2014,352454,38266,
+			2015,43711,62515,
+			2016,56444,44245,</pre>
+<pre id="Fulton" style="display:none">Year,Male,Female
+			2012,6535,7426,
+			2013,42103,53407,
+			2014,39534,32386,
+			2015,37211,56795,
+			2016,42244,44248,</pre>
+<pre id="Gibson" style="display:none">Year,Male,Female
+			2012,6535,3176,
+			2013,40390,42407,
+			2014,36718,38656,
+			2015,32471,45395,
+			2016,42453,24448,</pre>
+<pre id="Grant" style="display:none">Year,Male,Female
+			2012,6535,5976,
+			2013,34403,56407,
+			2014,39244,36486,
+			2015,86731,68955,
+			2016,62864,94448,</pre>
+<pre id="Greene" style="display:none">Year,Male,Female
+			2012,6535,9676,
+			2013,44023,26437,
+			2014,39434,38466,
+			2015,37561,39635,
+			2016,25224,44538,</pre>
+<pre id="Hamilton" style="display:none">Year,Male,Female
+			2012,5535,3976,
+			2013,24443,42507,
+			2014,32244,38526,
+			2015,43651,33595,
+			2016,75324,96328,</pre>
+<pre id="Hancock" style="display:none">Year,Male,Female
+			2012,5355,9576,
+			2013,64803,23057,
+			2014,29544,38366,
+			2015,12712,32555,
+			2016,142454,134448,</pre>
+<pre id="Harrison" style="display:none">Year,Male,Female
+			2012,6535,6176,
+			2013,40243,23407,
+			2014,31444,13846,
+			2015,37141,39355,
+			2016,41214,44348,</pre>
+<pre id="Hendricks" style="display:none">Year,Male,Female
+			2012,6535,7176,
+			2013,12403,24407,
+			2014,39634,33586,
+			2015,133741,31455,
+			2016,42424,44258,</pre>
+<pre id="Henry" style="display:none">Year,Male,Female
+			2012,4535,5176,
+			2013,40243,57077,
+			2014,24394,38526,
+			2015,34751,89395,
+			2016,41424,88648,</pre>
+<pre id="Howard" style="display:none">Year,Male,Female
+			2012,6655,9176,
+			2013,40643,67547,
+			2014,65394,63866,
+			2015,67371,75395,
+			2016,82744,97458,</pre>
+<pre id="Huntington" style="display:none">Year,Male,Female
+			2012,6655,7976,
+			2013,7504,16087,
+			2014,39674,34386,
+			2015,57741,46945,
+			2016,82634,72548,</pre>
+<pre id="Jackson" style="display:none">Year,Male,Female
+			2012,6545,6876,
+			2013,17405,470457,
+			2014,14695,38646,
+			2015,37431,39645,
+			2016,25424,44648,</pre>
+<pre id="Jasper" style="display:none">Year,Male,Female
+			2012,6535,9176,
+			2013,44553,44457,
+			2014,39242,25856,
+			2015,37341,45395,
+			2016,87424,78448,</pre>
+<pre id="Jay" style="display:none">Year,Male,Female
+			2012,1635,9176,
+			2013,78903,47607,
+			2014,33594,38676,
+			2015,37361,35785,
+			2016,46754,44458,</pre>
+<pre id="Jefferson" style="display:none">Year,Male,Female
+			2012,6635,5176,
+			2013,34453,24607,
+			2014,45694,35786,
+			2015,67781,87535,
+			2016,124244,24348,</pre>
+<pre id="Jennings" style="display:none">Year,Male,Female
+			2012,6535,4176,
+			2013,11343,13407,
+			2014,39544,34576,
+			2015,31471,24395,
+			2016,42414,42448,</pre>
+<pre id="Johnson" style="display:none">Year,Male,Female
+			2012,2635,3976,
+			2013,14443,13407,
+			2014,24634,23585,
+			2015,33471,36795,
+			2016,42324,44548,</pre>
+<pre id="Knox" style="display:none">Year,Male,Female
+			2012,10435,6916,
+			2013,16783,41227,
+			2014,39894,35436,
+			2015,77431,64935,
+			2016,94024,144228,</pre>
+<pre id="Kosciusko" style="display:none">Year,Male,Female
+			2012,16535,19176,
+			2013,20133,10137,
+			2014,31394,13386,
+			2015,78134,25955,
+			2016,42543,44548,</pre>
+<pre id="LaGrange" style="display:none">Year,Male,Female
+			2012,1255,12976,
+			2013,45303,41307,
+			2014,39644,35286,
+			2015,68461,69625,
+			2016,97965,81548,</pre>
+<pre id="Lake" style="display:none">Year,Male,Female
+			2012,6535,4176,
+			2013,40573,43407,
+			2014,31945,67586,
+			2015,57851,59475,
+			2016,96254,74258,</pre>
+<pre id="Vermont" style="display:none">Year,Male,Female
+			2012,6653,6166,
+			2013,14033,24607,
+			2014,39524,68736,
+			2015,77531,97425,
+			2016,123645,154648,</pre>
+<pre id="LaPorte" style="display:none">Year,Male,Female
+			2012,6535,9176,
+			2013,13043,12407,
+			2014,25943,43846,
+			2015,31471,35945,
+			2016,47824,74428,</pre>
+<pre id="Lawrence" style="display:none">Year,Male,Female
+			2012,16535,19176,
+			2013,43543,60867,
+			2014,39544,46856,
+			2015,67751,69755,
+			2016,75424,84548,</pre>
+<pre id="Madison" style="display:none">Year,Male,Female
+			2012,5535,6576,
+			2013,14023,24437,
+			2014,29454,38536,
+			2015,47541,79635,
+			2016,42534,94248,</pre>
+<pre id="Marion" style="display:none">Year,Male,Female
+			2012,16535,19176,
+			2013,40453,40567,
+			2014,69764,78886,
+			2015,89981,99655,
+			2016,97444,144248,</pre>
+<pre id="Marshall" style="display:none">Year,Male,Female
+			2012,4655,6176,
+			2013,35403,30527,
+			2014,35324,58646,
+			2015,64371,69325,
+			2016,78924,89458,</pre>
+
+<pre id="Martin" style="display:none">Year,Male,Female
+			2012,5635,8176,
+			2013,26703,12037,
+			2014,39534,38536,
+			2015,35371,63295,
+			2016,75824,45748,</pre>
+<pre id="Miami" style="display:none">Year,Male,Female
+			2012,5535,4976,
+			2013,15053,22057,
+			2014,64944,38616,
+			2015,67471,67495,
+			2016,42644,63648,</pre>
+<pre id="Monroe" style="display:none">Year,Male,Female
+			2012,6535,7976,
+			2013,20533,14307,
+			2014,27954,32856,
+			2015,67531,79525,
+			2016,64254,37848,</pre>
+<pre id="Montgomery" style="display:none">Year,Male,Female
+			22012,6535,5676,
+			2013,12053,26707,
+			2014,45694,38536,
+			2015,64731,57945,
+			2016,67244,66448,</pre>
+<pre id="Morgan" style="display:none">Year,Male,Female
+			2012,5535,6176,
+			2013,25703,24507,
+			2014,39642,46786,
+			2015,68471,24595,
+			2016,123641,144528,</pre>
+<pre id="Newton" style="display:none">Year,Male,Female
+			2012,6535,9476,
+			2013,22053,13057,
+			2014,13944,23856,
+			2015,33571,47395,
+			2016,72434,45448,</pre>
+<pre id="Noble" style="display:none">Year,Male,Female
+			2012,16535,19176,
+			2013,20423,35057,
+			2014,59644,38636,
+			2015,67751,89925,
+			2016,92856,94648,</pre>
+<pre id="Ohio" style="display:none">Year,Male,Female
+			2012,6535,9176,
+			2013,24043,12407,
+			2014,39634,38746,
+			2015,67751,75935,
+			2016,82423,67478,</pre>
+<pre id="Orange" style="display:none">Year,Male,Female
+			2012,16535,20176,
+			2013,74503,26047,
+			2014,53964,58846,
+			2015,97531,75955,
+			2016,79424,97448,</pre>
+<pre id="Owen" style="display:none">Year,Male,Female
+			2012,6535,9786,
+			2013,14560.3,24407,
+			2014,23394,35386,
+			2015,47371,645395,
+			2016,68424,67448,</pre>
+<pre id="Parke" style="display:none">Year,Male,Female
+			2012,7535,6176,
+			2013,12343,24057,
+			2014,13494,38326,
+			2015,68971,75935,
+			2016,46244,28448,</pre>
+<pre id="Perry" style="display:none">Year,Male,Female
+			2012,4635,5976,
+			2013,14023,24037,
+			2014,34554,33456,
+			2015,64731,69435,
+			2016,87424,67458,</pre>
+<pre id="Pike" style="display:none">Year,Male,Female
+			2012,5356,6146,
+			2013,10533,13047,
+			2014,29534,38546,
+			2015,64741,69743,
+			2016,97424,74248,</pre>
+<pre id="Porter " style="display:none">Year,Male,Female
+			2012,26535,29176,
+			2013,46433,50747,
+			2014,89434,64836,
+			2015,56471,64925,
+			2016,74234,54438,</pre>
+<pre id="Posey" style="display:none">Year,Male,Female
+			2012,1535,1176,
+			2013,13403,23037,
+			2014,42944,42846,
+			2015,74741,56795,
+			2016,74324,93248,</pre>
+<pre id="Pulaski" style="display:none">Year,Male,Female
+			2012,1535,1176,
+			2013,15603,23457,
+			2014,49534,53846,
+			2015,64371,74935,
+			2016,75424,67548,</pre>
+<pre id="Putnam" style="display:none">Year,Male,Female
+			2012,5635,8916,
+			2013,15353,23407,
+			2014,23494,53865,
+			2015,74731,65935,
+			2016,65434,733648,</pre>
+<pre id="Randolph " style="display:none">Year,Male,Female
+			2012,5135,9176,
+			2013,21303,23027,
+			2014,39434,31826,
+			2015,47431,53935,
+			2016,65424,64348,</pre>
+<pre id="Ripley" style="display:none">Year,Male,Female
+			2012,6535,9176,
+			2013,24043,13407,
+			2014,49324,38556,
+			2015,53751,69535,
+			2016,62644,56448,</pre>
+<pre id="Rush" style="display:none">Year,Male,Female
+			2012,6635,5376,
+			2013,25303,45407,
+			2014,39644,38646,
+			2015,57531,54945,
+			2016,63244,64438,</pre>
+
+<pre id="Scott" style="display:none">Year,Male,Female
+			2012,5435,6176,
+			2013,54303,42407,
+			2014,64394,36486,
+			2015,63471,36495,
+			2016,54424,64448,</pre>
+
+<pre id="Shelby" style="display:none">Year,Male,Female
+			2012,5535,9156,
+			2013,34043,32407,
+			2014,35934,43386,
+			2015,64371,56435,
+			2016,53424,46428,</pre>
+
+<pre id="Spencer" style="display:none">Year,Male,Female
+			2012,1635,1976,
+			2013,53303,43307,
+			2014,65434,36436,
+			2015,364371,64395,
+			2016,135434,234535,</pre>
+
+<pre id="St. Joseph" style="display:none">Year,Male,Female
+			2012,1535,9176,
+			2013,40353,63247,
+			2014,39544,66436,
+			2015,54731,63965,
+			2016,65424,64448,</pre>
+
+<pre id="Starke" style="display:none">Year,Male,Female
+			2012,6535,7976,
+			2013,20533,14307,
+			2014,27954,32856,
+			2015,67531,79525,
+			2016,64254,37848,</pre>
+
+<pre id="Steuben" style="display:none">Year,Male,Female
+			2012,16535,19176,
+			2013,20133,10137,
+			2014,31394,13386,
+			2015,78134,25955,
+			2016,42543,44548,</pre>
+
+<pre id="Sullivan" style="display:none">Year,Male,Female
+			2012,6535,7976,
+			2013,20533,14307,
+			2014,27954,32856,
+			2015,67531,79525,
+			2016,64254,37848,</pre>
+
+<pre id="Switzerland" style="display:none">Year,Male,Female
+			2012,6535,1976,
+			2013,24303,23407,
+			2014,33594,45386,
+			2015,35371,54495,
+			2016,42544,45448,</pre>
+
+<pre id="Tippecanoe" style="display:none">Year,Male,Female
+			2012,16535,19176,
+			2013,20133,10137,
+			2014,31394,13386,
+			2015,78134,25955,
+			2016,42543,44548,</pre>
+
+<pre id="Tipton" style="display:none">Year,Male,Female
+			2012,3535,6776,
+			2013,5643,53307,
+			2014,39544,36486,
+			2015,37541,33353,
+			2016,45454,45338,</pre>
+
+<pre id="Union" style="display:none">Year,Male,Female
+			ion" style="display:none">Year,Male,Female
+			2012,16535,19176,
+			2013,40453,40567,
+			2014,69764,78886,
+			2015,89981,99655,
+			2016,97444,144248,</pre>
+
+<pre id="Vanderburgh" style="display:none">Year,Male,Female
+			2012,16535,9176,
+			2013,20133,30137,
+			2014,31394,43386,
+			2015,58134,55955,
+			2016,62543,54548,</pre>
+
+<pre id="Vermillion" style="display:none">Year,Male,Female
+			2012,6535,7976,
+			2013,20533,14307,
+			2014,27954,32856,
+			2015,67531,79525,
+			2016,64254,37848,</pre>
+
+<pre id="Vigo" style="display:none">Year,Male,Female
+			2012,6535,9176,
+			2013,40163,53407,
+			2014,65654,46386,
+			2015,47114,13595,
+			2016,52446,64458,,</pre>
+<pre id="Wabash" style="display:none">Year,Male,Female
+			2012,6535,7976,
+			2013,20533,14307,
+			2014,27954,32856,
+			2015,67531,79525,
+			2016,64254,37848,</pre>
+<pre id="Warren” style="display:none">Year,Male,Female
+			2012,6535,6176,
+			2013,40243,23407,
+			2014,31444,13846,
+			2015,37141,39355,
+			2016,41214,44348,</pre>
+<pre id="Warrick" style="display:none">Year,Male,Female
+			2012,6535,9176,
+			2013,40133,23407,
+			2014,39654,14386,
+			2015,37114,13395,
+			2016,42446,24458,</pre>
+<pre id="Washington" style="display:none">Year,Male,Female
+			2012,6535,6176,
+			2013,40243,23407,
+			2014,31444,13846,
+			2015,37141,39355,
+			2016,41214,44348,</pre>
+<pre id="Wayne" style="display:none">Year,Male,Female
+			2012,16535,19176,
+			2013,25403,56407,
+			2014,39647,57386,
+			2015,367735,25365,
+			2016,36254,36748,</pre>
+<pre id="Wells" style="display:none">Year,Male,Female
+			2012,6653,6166,
+			2013,14033,24607,
+			2014,39524,68736,
+			2015,77531,97425,
+			2016,123645,154648,</pre>
+<pre id="White" style="display:none">Year,Male,Female
+			2012,16535,19176,
+			2013,20133,10137,
+			2014,31394,13386,
+			2015,78134,25955,
+			2016,42543,44548,</pre>
+<pre id="Whitley" style="display:none">Year,Male,Female
+			2012,16535,19176,
+			2013,20423,35057,
+			2014,59644,38636,
+			2015,67751,89925,
+			2016,92856,94648,</pre>
+
+
+
+	
+<div id="container2" class="container" style=style="min-width: 200px; max-width:280px; height: 350px; margin: -100 auto; x: 100px; y:40px" class="ChartBox"></div>
+<div id="container1" class="container" 		style="min-width: 600px; max-width:280px; height: 400px; margin: -100 auto; x: 100px; y:40px;" class="ChartBox"></div>
+<pre id="Adams1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,17243, 33363, 17540, 44229, 3559, 49122, 39697, 39499,
+			2013,3713,56781,7895,39578,,50134,36834,
+			2014,3080,5230,53214,3256,67895,47167,3664,
+			2015,37878,4105,,4007,5670,12436,34455,
+			2016,4810,5412,56789,3467,7890,55555,38672,</pre>
+<pre id="Allen1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,13425, 16775, 28525, 6808, 4300, 23150, 38179, 12017,
+			2013,4856, 31936, 3199, 4184, 23098, 16369, 17248, 39715,
+			2014,22370, 4938, 20236, 45852, 21205, 47720, 11699, 15866,
+			2015,15174, 27191, 13862, 17766, 16604, 6287, 23581, 37681,
+			2016,22254, 14965, 28321, 23068, 5311, 45920, 49377, 24529</pre>
+<pre id="Benton1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,38726, 12548, 33042, 4039, 30953, 21302, 30747, 39225,
+			2013,44334, 34576, 40577, 8785, 7003, 10270, 26266, 26663],
+			2014,40654, 25260, 40674, 34919, 7460, 32874, 11538, 274419,
+			2015,15106, 21044, 11649, 47145, 11264, 4495, 44887, 239263,
+			2016,8166, 44414, 14794, 8857, 30849, 28801, 46606, 48620,</pre>
+<pre id="Bartholomew1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,24982, 31639, 25034, 38698, 20125, 7080, 12725, 19625,
+			2013,5796, 36133, 36789, 26959, 40804, 19658, 34812, 22608,
+		    2014,37445, 4071, 9358, 3902, 28665, 26213, 22560, 40082,
+	        2015,13154, 38276, 41279, 18703, 36788, 4778, 45668, 3336,
+            2016,28420, 38887, 33194, 38689, 8348, 18015, 36849, 17046,</pre>
+<pre id="Blackford1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,44403, 38029, 40194, 20999, 24645, 32805, 9878, 33439,
+			2013,39087, 36237, 24189, 31785, 16265, 37237, 27412, 29893,
+			2014,48612, 4345, 3627, 31097, 16820, 16565, 14018, 12432,
+			2015,25594, 38576, 11946, 17973, 13477, 19282, 31118, 26427,
+			2016,5118, 41427, 10953, 7392, 45216, 8161, 46531, 23690,</pre>
+<pre id="Boone1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,10268, 5746, 41783, 13375, 12030, 17897, 34023, 13348,
+			2013,30878, 39204, 30404, 12811, 48551, 5204, 5423, 19327,
+			2014,21119, 11706, 46029, 25766, 46583, 32540, 20782, 8136,
+			2015,29359, 40398, 7691, 24868, 8438, 39190, 28586, 14833,
+			2016,35098, 3660, 16938, 24408, 25954, 30527, 44329, 11162,</pre>
+<pre id="Brown1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,28763, 17522, 20793, 33935, 12571, 32494, 22243, 19130,
+			2013,17516, 12431, 12212, 20402, 5711, 46291, 49126, 26933,
+			2014,22851, 5799, 20655, 40721, 27553, 31894, 5052, 3175,
+			2015,34882, 31944, 33323, 22190, 20096, 21934, 15753, 19406,
+			2016,39070, 30470, 20117, 45961, 12070, 14950, 33545, 16136,</pre>
+<pre id="Cass1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,3072, 8753, 9550, 9963, 13393, 30393, 7540, 37336,
+			2013,15188, 34779, 35669, 16414, 41873, 22096, 37044, 28146,
+			2014,4881, 20666, 35576, 48662, 41049, 47065, 42967, 17257,
+			2015,28358, 14319, 44207, 44979, 23242, 20218, 41495, 3250,
+			2016,21557, 44037, 35615, 47029, 16085, 24142, 17251, 36437,</pre>
+<pre id="Carroll1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,19883, 18005, 37607, 38752, 34463, 21640, 8904, 252235,
+			2013,13706, 13412, 19635, 23756, 24169, 32903, 27079, 9041,
+			2014,41159, 45278, 7732, 24973, 49158, 7845, 33383, 31518,
+			2015,4890, 4194, 47964, 11954, 17366, 6738, 43941, 27654,
+			2016,12803, 23341, 38573, 8098, 30003, 6436, 38574, 10999,</pre>
+<pre id="Clark1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,7818, 8781, 3895, 23538, 3938, 16827, 3746, 16035,
+			2013,33650, 45279, 38410, 7430, 46376, 39891, 45485, 9221,
+			2014,39850, 22036, 16121, 42597, 23052, 42695, 26971, 8572,
+			2015,344785, 22917, 6373, 9394, 20935, 33872, 41508, 9891,
+			2016,28866, 27666, 42255, 37100, 8352, 10298, 48112, 40474,</pre>
+<pre id="Clay1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,5423, 8845, 46044, 25358, 16780, 5753, 6645, 25983,
+			2013,36131, 30039, 23286, 10093, 12927, 47526, 31714, 43492,
+			2014,26738, 30136, 4982, 46046, 5536, 32218, 42237, 42210,
+			2015,34811, 13638, 3602, 3888, 15772, 26206, 20006, 42558,
+			2016,13341, 19967, 10353, 39190, 8244, 41837, 26441, 34499,</pre>
+<pre id="Guam1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,41174, 27447, 37335, 38076, 34219, 44957, 20261, 15488,
+			2013,3341, 35838, 27703, 33622, 24413, 46350, 36268, 43172,
+			2014,21773, 42767, 37321, 38056, 32415, 15072, 5672, 36062,
+			2015,19654, 23714, 40349, 44589, 27505, 33096, 38164, 19345,
+			2016,20107, 48899, 35353, 48423, 26691, 20844, 31002, 24233,</pre>
+<pre id="Clinton1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,37754, 18083, 40307, 38739, 30625, 5814, 21358, 47534,
+			2013,11111, 47738, 49602, 37366, 23330, 32810, 46285, 41112,
+			2014,33714, 13566, 22363, 30174, 13961, 17099, 4720, 3206,
+			2015,23066, 9248, 11969, 44664, 38107, 15151, 22622,
+			2016,45215, 25401, 4661, 19511, 24968, 38445, 45835,</pre>
+<pre id="Decatur1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,25786, 26220, 49737, 3160, 12682, 25521, 36692, 32860,
+			2013,27470, 23891, 49287, 22550, 9352, 29272, 23562, 25914,
+			2014,17935, 34381, 38774, 40580, 31726, 12138, 40660, 8282,
+			2015,18979, 12770, 43351, 18764, 21620, 21633, 48951, 28742,
+			2016,16190, 28385, 4622, 30986, 40160, 43339, 28771, 9389,</pre>
+<pre id="Crawford1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,31758, 20094, 14594, 28921, 45282, 47018, 29973, 36577,
+			2013,31984, 47244, 43535, 45153, 42208, 4786, 8204, 26162,
+			2014,6237, 23039, 17605, 34879, 16553, 28145, 16549, 10542,
+			2015,25481, 20695, 3984, 3668, 16276, 12519, 6278, 21664,
+			2016,6038, 43137, 18553, 43195, 37091, 8399, 6312, 12983,</pre>
+<pre id="Daviess1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,3267, 44873, 4873, 46235, 26010, 49320, 46175, 7305,
+			2013,29826, 6000, 43950, 5757, 13948, 21962, 13709, 37597,
+			2014,29430, 20918, 25630, 39739, 30411, 45854, 16615, 9330,
+			2015,9135, 33072, 19436, 30203, 30582, 15166, 36438, 35076,
+			2016,41496, 25052, 45331, 7610, 22008, 45808, 11899, 33585,</pre>
+<pre id="Dearborn1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,41708, 13687, 41763, 13480, 8282, 35099, 43823, 36491,
+			2013,25599, 5095, 35090, 46405, 25766, 28942, 3083, 7152,
+			2014,39653, 5597, 43892, 11299, 30956, 44533, 9385, 3030,
+			2015,17166, 37629, 46285, 21968, 37332, 23019, 26620, 40835,
+			2016,36606, 39225, 5120, 16450, 36542, 37476, 34148, 18150,</pre>
+<pre id="DeKalb1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,6690, 45952, 48257, 24059, 11290, 39622, 39162, 35562,
+			2013,40707, 11990, 27280, 24484, 39137, 16503, 24729, 14037,
+			2014,10044, 30578, 24836, 16971, 47991, 48191, 16298, 32559,
+			2015,22369, 6099, 39251, 12146, 15688, 47378, 26958, 17728,
+			2016,23751, 30325, 22541, 24390, 33199, 16971, 41793, 24820,</pre>
+<pre id="Delaware1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,28088, 32787, 39641, 33892, 37210, 33131, 8349, 42909,
+			2013,36966, 30195, 18598, 49191, 46309, 24742, 22985, 3015,
+			2014,36966, 30195, 18598, 49191, 46309, 24742, 22985, 3015,
+			2015,36966, 30195, 18598, 49191, 46309, 24742, 22985, 3015,
+			2016,36966, 30195, 18598, 49191, 46309, 24742, 22985, 3015,</pre>
+<pre id="Dubois1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,28088, 32787, 39641, 33892, 37210, 33131, 8349, 42909,
+			2013,19474, 24273, 26308, 37081, 33918, 45190, 13685, 47429,
+			2014,19140, 34671, 32906, 6745, 20635, 46101, 14211, 35640,
+			2015,43731, 46687, 23112, 36356, 11075, 42198, 48259, 31472,
+			2016,28629, 25545, 18816, 41785, 47890, 47643, 7026, 47853,</pre>
+<pre id="Elkhart1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,40474, 46367, 10111, 23488, 45769, 17628, 43894, 8043,
+			2013,11842, 21181, 15074, 47695, 8180, 7463, 29407, 19184,
+			2014,45504, 4177, 15738, 4469, 36670, 43190, 16173, 34117,
+			2015,17191, 37077, 10559, 34606, 13461, 43308, 32063, 45068,
+			2016,32187, 9142, 16289, 35943, 3384, 11065, 17615, 28779,</pre>
+<pre id="Fayette1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,46170, 38554, 7392, 13170, 48734, 21417, 24158, 22355,
+			2013,27434, 30203, 18213, 14659, 30326, 36500, 43338, 12089,
+			2014,17253, 49205, 48049, 23858, 49963, 19751, 15115, 40474,
+			2015,27098, 40248, 48256, 49642, 22506, 16818, 19272, 38995,
+			2016,28750, 42752, 26529, 24797, 32520, 16737, 10469, 34345,</pre>
+<pre id="Floyd1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,34592, 7120, 25442, 16524, 16105, 5461, 46316, 17171,
+			2013,45412, 7269, 24559, 25683, 36083, 7086, 28426, 301455,
+			2014,26610, 5180, 14325, 46136, 23914, 25468, 32207, 14534,
+			2015,23310, 38731, 43308, 44652, 37761, 8866, 45822, 3790,
+			2016,36838, 15166, 40872, 16144, 46750, 11222, 28654, 6768,</pre>
+<pre id="Fountain1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,5688, 9466, 27632, 25238, 5102, 46508, 32759, 14231,
+			2013,45576, 45587, 8313, 46994, 19279, 13051, 8029, 19134,
+			2014,47028, 7765, 30287, 42893, 32094, 22933, 49582, 25928],
+			2015,36889, 6339, 42812, 8264, 38359, 38678, 38667, 27503,
+			2016,10428, 13102, 38757, 6245, 19591, 37326, 20345, 47753,</pre>
+<pre id="Franklin1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,49164, 17029, 8430, 15292, 21856, 5714, 42050, 18727,
+			2013,15579, 13468, 15821, 32958, 10561, 46407, 33508, 6491,
+			2014,17108, 16408, 37286, 8989, 33864, 45892, 47965, 27619,
+			2015,46084, 40321, 23293, 45888, 34113, 47340, 8382, 39451,
+			2016,32347, 46246, 49918, 43814, 29635, 4889, 40272, 38911,</pre>
+<pre id="Fulton1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,12898, 12125, 38250, 21731, 47363, 42885, 19958, 10753,
+			2013,37774, 3354, 33948, 38645, 12643, 28664, 4077, 40989,
+			2014,24041, 23448, 9118, 43053, 47442, 12735, 15584, 19847,
+			2015,25732, 4015, 35229, 24867, 29392, 39491, 31133, 14247,
+			2016,34219, 11470, 11870, 14117, 49571, 30299, 40402, 26122,</pre>
+<pre id="Gibson1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,39887, 45209, 44613, 26566, 17231, 42993, 6976, 48024,
+			2013,7902, 32503, 40060, 34405, 26843, 21295, 14168, 14526,
+			2014,17138, 20482, 4807, 39728, 24460, 9568, 14657, 18466,
+			2015,44436, 25050, 4608, 24513, 43559, 24084, 37019, 40696,
+			2016,30545, 15495, 29017, 18621, 33214, 10551, 7510, 19935,</pre>
+<pre id="Grant1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,23843, 22197, 16598, 49317, 24039, 24954, 21135, 22566,
+			2013,44752, 37863, 43048, 7951, 24699, 22407, 33249, 45955,
+			2014,18548, 47435, 30216, 6373, 10916, 16327, 8728, 35040,
+			2015,24425, 42624, 35252, 4818, 5701, 40771, 22860, 45805,
+			2016,17836, 33203, 19861, 35377, 38203, 27858, 14615, 9357,</pre>
+<pre id="Greene1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,42885, 21819, 48401, 33500, 32829, 6690, 8721, 28746,
+			2013,15146, 39604, 42621, 22114, 6609, 20950, 36450, 34190,
+			2014,24330, 27286, 8826, 21197, 44048, 11672, 38151, 25593,
+			2015,13128, 16994, 46670, 43930, 12968, 3235, 20733, 46414,
+			2016,29100, 41664, 32611, 26473, 12156, 27763, 34029, 41170,</pre>
+<pre id="Hamilton1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,40631, 15105, 46237, 38891, 10677, 21261, 10517, 8609,
+			2013,10602, 43740, 24037, 28907, 29324, 43919, 23969, 11011,
+			2014,36996, 46044, 23387, 4681, 12780, 27628, 39281, 41042,
+			2015,35562, 10484, 27117, 39567, 33337, 9146, 45955, 11363,
+			2016,15394, 25536, 27690, 49858, 33700, 7709, 42817, 24866,</pre>
+<pre id="Hancock1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,42302, 15187, 42778, 25091, 18563, 9334, 25546, 33576,
+			2013,12018, 9684, 22479, 34066, 30879, 41110, 28238, 10561,
+			2014,32359, 46673, 16479, 24636, 24934, 38761, 20738, 8995,
+			2015,49934, 8351, 26832, 8355, 47365, 33729, 4516, 22184,
+			2016,48466, 14288, 15868, 22258, 40666, 31544, 37761, 7158,</pre>
+<pre id="Harrison1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,41770, 23494, 22022, 17174, 37686, 8280, 4308, 34261,
+			2013,31326, 22854, 43151, 42690, 24243, 27546, 15502, 35753,
+			2014,8734, 28942, 24896, 11624, 26652, 12106, 45382, 9074,
+			2015,44020, 7847, 14345, 20884, 20605, 32037, 48973, 26041,
+			2016,34858, 29100, 20346, 41415, 16342, 5712, 46094, 44773,</pre>
+<pre id="Hendricks1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,28777, 37666, 20159, 30286, 4973, 26121, 31965, 12100,
+			2013,49220, 45495, 15713, 17470, 10508, 10003, 10040, 32805,
+			2014,3294, 20882, 39297, 3819, 22987, 13234, 33191, 20697,
+			2015,49608, 27103, 8266, 13039, 22047, 43306, 40530, 13738,
+			2016,15566, 32162, 8253, 38559, 36476, 16448, 26241, 26005,</pre>
+<pre id="Henry1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,16400, 16982, 11314, 26084, 40907, 38854, 12234, 21641,
+			2013,36456, 16368, 40106, 44226, 6457, 29376, 4771, 30725,
+			2014,22262, 14918, 14737, 3292, 17345, 39777, 41123, 4323,
+			2015,37296, 19998, 28216, 41117, 24225, 23820, 33240, 9361,
+			2016,4182, 21783, 22469, 45317, 25859, 39399, 7735, 8708,</pre>
+<pre id="Howard1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,6571, 46539, 19770, 44055, 49978, 34364, 47491, 5390,
+			2013,41746, 27572, 44460, 45049, 30729, 49295, 18601, 33873,
+			2014,45687, 37935, 48623, 37718, 43409, 41501, 41546, 45155,
+			2015,38429, 42413, 44726, 29127, 4095, 46000, 32200, 13678,
+			2016,28922, 6211, 33989, 29577, 45649, 5545, 38563, 35875,</pre>
+<pre id="Huntington1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,45815, 47088, 37305, 11356, 3071, 21874, 11755, 34022,
+			2013,34295, 9339, 15594, 24304, 22997, 37805, 24731, 26763,
+			2014,9994, 3394, 27002, 41936, 37903, 43435, 14322, 39250,
+			2015,29150, 18466, 49426, 28010, 11713, 46589, 39618, 42416,
+			2016,7059, 14025, 23937, 36784, 16723, 40200, 7715, 21785,</pre>
+<pre id="Jackson1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,34415, 29422, 42532, 21647, 8652, 23993, 46026, 10647,
+			2013,27252, 14866, 7523, 17706, 20575, 9300, 22801, 49291,
+			2014,5847, 14212, 33154, 5832, 13548, 29835, 12480, 38903,
+			2015,46368, 15696, 22107, 4787, 45809, 28424, 22526, 10896,
+			2016,21842, 16628, 46913, 31795, 45274, 23604, 37342, 38010,</pre>
+<pre id="Jasper1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,3972, 38632, 40330, 32042, 4309, 38591, 47112, 36264,
+			2013,16879, 7277, 35010, 26295, 17233, 29496, 6623, 13823,
+			2014,45547, 21955, 12147, 32101, 12313, 20330, 29135, 10575,
+			2015,7158, 48976, 10085, 40164, 46199, 49148, 44963, 12917,
+			2016,46524, 6811, 25151, 40714, 7101, 40083, 44958, 23854,</pre>
+<pre id="Jay1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,9597, 18697, 9422, 38013, 6665, 20198, 41476, 30930,
+			2013,32515, 15165, 49091, 47559, 11457, 12272, 14635, 22120,
+			2014,43493, 18113, 19236, 41977, 31912, 49399, 19201, 47780,
+			2015,29059, 28326, 29018, 34185, 5939, 31051, 7900, 45790,
+			2016,10835, 38477, 13543, 6773, 49688, 41303, 42000, 13919,</pre>
+<pre id="Jefferson1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,18433, 24265, 9665, 46606, 25521, 3361, 19423, 190535,
+			2013,44570, 6082, 23163, 14428, 7151, 12864, 12005, 33279,
+			2014,5246, 46985, 31378, 40241, 46118, 45813, 34713, 36065,
+			2015,4370, 7382, 42164, 37136, 11830, 22285, 12781, 4291,
+			2016,16177, 3327, 35066, 32008, 37171, 19083, 22317, 35984,</pre>
+<pre id="Jennings1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,6356, 30770, 47576, 42886, 32968, 17077, 49411, 8955,
+			2013,49559, 40033, 5740, 4986, 4601, 23517, 49377, 20352,
+			2014,30299, 26408, 30431, 21014, 44659, 32424, 14562, 40842,
+			2015,34083, 46214, 33946, 5290, 6733, 19479, 41618, 19846,
+			2016,25680, 39354, 17795, 14481, 36832, 4689, 24579, 31955,</pre>
+<pre id="Johnson1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,14032, 45014, 35577, 19907, 22085, 3586, 48016, 20652,
+			2013,5979, 32762, 14292, 25912, 15617, 17859, 19450, 33723,
+			2014,3340, 35677, 17606, 43962, 14350, 30228, 27147, 22817,
+			2015,35459, 30368, 26496, 3164, 42286, 18768, 28702, 30818,
+			2016,6990, 3315, 9264, 34893, 37485, 16835, 16953, 44393,</pre>
+<pre id="Knox1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,17360, 38045, 6097, 12993, 44253, 10843, 40238, 42216,
+			2013,9769, 27835, 26551, 38055, 48714, 43238, 40306, 44530,
+			2014,34665, 41880, 35421, 43786, 21156, 16240, 9907, 25174,
+			2015,18380, 35648, 3582, 27043, 15254, 26861, 44974, 47174,
+			2016,17240, 34305, 20105, 15873, 17427, 25628, 25193, 10867,</pre>
+<pre id="Kosciusko1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,47109, 26651, 20947, 13722, 10315, 11290, 16166, 23243,
+			2013,14486, 38458, 40186, 11879, 8447, 39606, 28608, 28914,
+			2014,9914, 20129, 22066, 4439, 22980, 38853, 26407, 6524,
+			2015,48125, 14017, 48457, 5847, 42415, 32298, 39088, 34467,
+			2016,10808, 23241, 31659, 27575, 37034, 26001, 27032, 30186,</pre>
+<pre id="LaGrange1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,15151, 23298, 42638, 43647, 9682, 22846, 21827, 46676,
+			2013,37133, 24109, 20162, 29332, 13704, 41803, 20385, 13430,
+			2014,16707, 5585, 49733, 38769, 20877, 47941, 27811, 6420,
+			2015,49072, 34351, 19278, 14853, 12999, 17364, 26707, 18663,
+			2016,27885, 41496, 25773, 42680, 23022, 12198, 25101, 45286,</pre>
+<pre id="Lake1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,30129, 33143, 25845, 35364, 32222, 44867, 20941, 5778,
+			2013,40501, 7700, 39534, 34445, 31438, 44220, 36879, 17864,
+			2014,8997, 13864, 8095, 8333, 27507, 32849, 47109, 23101,
+			2015,45397, 38218, 20634, 45016, 9701, 39690, 13515, 14857,
+			2016,45026, 10456, 41680, 5507, 41776, 35846, 19498, 9472,</pre>
+<pre id="Vermont1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,3905, 28444, 17549, 47438, 12506, 19364, 28458, 40867,
+			2013,28427, 31782, 7801, 28500, 25451, 14476, 33267, 9559,
+			2014,16400, 5119, 13539, 34506, 30679, 12385, 19198, 43734,
+			2015,24085, 30974, 7257, 28894, 43171, 39992, 16476, 9693,
+			2016,18615, 4825, 49627, 23341, 4117, 28078, 3295, 37086,</pre>
+<pre id="LaPorte1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,17156, 16482, 47507, 41683, 4326, 39180, 8616, 34388,
+			2013,12363, 34970, 18468, 23149, 30374, 5961, 46798, 13717,
+			2014,31055, 39179, 42999, 32747, 5290, 25618, 14669, 38479,
+			2015,33361, 26646, 3372, 45808, 10201, 36096, 21387, 11261,
+			2016,16337, 25222, 4053, 34493, 37724, 44114, 23845, 22989,</pre>
+<pre id="Lawrence1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,33002, 27106, 5734, 44325, 30878, 23665, 35170, 35387,
+			2013,49203, 11211, 28422, 6042, 30537, 45084, 23653, 40949,
+			2014,27812, 43365, 14716, 24426, 39519, 38391, 34504, 45019,
+			2015,10082, 21963, 17426, 31825, 3203, 46884, 25500, 22503,
+			2016,14406, 7839, 23268, 22792, 33189, 45535, 11333, 30549,</pre>
+<pre id="Madison1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,15525, 26614, 14697, 13500, 47423, 3460, 10739, 49466,
+			2013,49737, 47642, 46864, 33276, 29311, 32689, 49193, 42288,
+			2014,36074, 19448, 39534, 36678, 40523, 38852, 20107, 24152,
+			2015,49543, 9415, 28362, 38893, 15162, 8704, 8035, 27381,
+			2016,39185, 26871, 21455, 11346, 33897, 41962, 39555, 22942,</pre>
+<pre id="Marion1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,38304, 7311, 46513, 44359, 47027, 37419, 32823, 15302,
+			2013,16271, 22952, 42482, 25494, 38349, 12080, 10612, 13021,
+			2014,20868, 48841, 25857, 30918, 7299, 44710, 49712, 45164,
+			2015,38805, 32661, 42613, 28903, 21169, 33094, 39978, 35522,
+			2016,21739, 13698, 4250, 16659, 42004, 11502, 40094, 3761,</pre>
+<pre id="Marshall1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,24751, 21135, 33674, 13975, 9194, 29180, 16138, 8192,
+			2013,49473, 8201, 34699, 20474, 15255, 21816, 27768, 37097,
+			2014,4360, 7554, 19655, 29130, 41510, 4634, 22924, 14367,
+			2015,43857, 7315, 44182, 29363, 3815, 35408, 33746, 25785,
+			2016,15394, 46152, 30223, 10274, 21252, 30787, 6686, 28867,</pre>
+<pre id="Martin1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,32142, 17218, 24951, 25622, 9332, 36008, 3068, 9525,
+			2013,9081, 40218, 17131, 10577, 16757, 6581, 29240, 37214,
+			2014,44464, 21768, 35932, 17843, 34879, 3264, 7814, 13214,
+			2015,7719, 11962, 27751, 17713, 12899, 48947, 14085, 24287,
+			2016,14868, 30241, 21339, 9679, 39630, 3166, 4212, 15183,</pre>
+<pre id="Miami1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,24756, 26394, 3240, 42984, 38514, 15354, 26780, 25606,
+			2013,26494, 15726, 40815, 17287, 9150, 8497, 34811, 9246,
+			2014,37961, 24124, 5751, 35530, 38090, 47789, 26977, 25794,
+			2015,15496, 16780, 36360, 24778, 17378, 11475, 29865, 29406,
+			2016,22033, 41081, 6461, 46333, 27567, 21708, 48113, 42545,</pre>
+<pre id="Monroe1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,32989, 28900, 16968, 34995, 9249, 15076, 35830, 30080,
+			2013,22462, 8910, 10707, 23355, 27973, 18369, 23730, 47571,
+			2014,12647, 33975, 20680, 44823, 20398, 16456, 24636, 34658,
+			2015,21285, 24847, 37182, 11814, 27782, 3573, 39943, 24373,
+			2016,33915, 6770, 39319, 26665, 33623, 43304, 42759, 30633,</pre>
+<pre id="Montgomery1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,39117, 7054, 33756, 46959, 34150, 9939, 9021, 27515,
+			2013,3005, 40670, 39440, 4822, 6433, 47422, 21566, 35275,
+			2014,41615, 29486, 6955, 16772, 25352, 4240, 12345, 3104,
+			2015,42544, 28717, 25274, 43122, 19677, 22281, 29706, 44841,
+			2016,4247, 31926, 15361, 45287, 14934, 37692, 32163, 38069,</pre>
+<pre id="Morgan1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,16249, 7331, 7631, 18796, 7561, 35585, 19347, 21120,
+			2013,43931, 10934, 33163, 46803, 38767, 46035, 33682, 44160,
+			2014,40965, 12417, 49044, 30893, 41517, 5900, 45640, 44881,
+			2015,14132, 29517, 19307, 10225, 31053, 28248, 16021, 30202,
+			2016,15178, 37629, 31234, 14612, 6451, 8953, 26210, 3127,</pre>
+<pre id="Newton1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,5018, 18918, 18388, 33198, 5337, 6775, 26260, 16348,
+			2013,36676, 31489, 45793, 42885, 30274, 23393, 23524, 14500,
+			2014,32804, 44414, 48879, 36634, 49855, 5756, 27461, 40503,
+			2015,44616, 31321, 26775, 13896, 24708, 27247, 33729, 22393,
+			2016,47403, 27167, 28016, 23657, 31130, 45713, 15729, 27138,</pre>
+<pre id="Noble1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,37871, 12656, 10455, 14418, 25634, 3380, 47674, 36375,
+			2013,12616, 15418, 10275, 47345, 25716, 37050, 14613, 7411,
+			2014,32609, 49535, 11308, 25631, 49257, 20614, 12705, 43603,
+			2015,37836, 36011, 9364, 5128, 41406, 8936, 14730, 12465,
+			2016,29059, 11639, 24727, 32297, 7761, 42018, 41678, 36126,</pre>
+<pre id="Ohio1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,46817, 12204, 46270, 49457, 15934, 45711, 46236, 41434,
+			2013,12678, 14829, 48211, 15196, 16793, 30621, 46327, 43897,
+			2014,28613, 17463, 37016, 5390, 41373, 32468, 3342, 4810,
+			2015,49981, 5119, 13794, 30679, 4294, 24788, 5170, 38292,
+			2016,28911, 42402, 10490, 3941, 44650, 23868, 34208, 39982,</pre>
+<pre id="Orange1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,45570, 24697, 31631, 33619, 16661, 19216, 10235, 29642,
+			2013,42597, 23521, 43611, 40453, 36791, 7124, 17202, 42096,
+			2014,38471, 47644, 15501, 44414, 20281, 37525, 13403, 37293,
+			2015,30335, 20995, 4273, 36048, 42702, 16876, 27325, 42829,
+			2016,43917, 5817, 45864, 35486, 29148, 42257, 6793, 38925,</pre>
+<pre id="Owen1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,43718, 30144, 36832, 12677, 25493, 26669, 7349, 49260,
+			2013,7959, 20214, 36586, 44699, 38702, 48215, 45646, 3780,
+			2014,4155, 27395, 47731, 43568, 4887, 33797, 44456, 4576,
+			2015,37023, 40365, 10511, 29765, 45063, 41165, 37342, 37694,
+			2016,26510, 37679, 20689, 15611, 17857, 26405, 23023, 40697,</pre>
+<pre id="Parke1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,19639, 16435, 10450, 43451, 14056, 24484, 11328, 13173,
+			2013,35308, 21887, 9079, 39274, 43251, 23347, 46209, 35662,
+			2014,29008, 38701, 27523, 29580, 3119, 21969, 48251, 7520,
+			2015,39316, 19007, 8920, 16698, 24950, 8484, 15568, 5900,
+			2016,3306, 36911, 49118, 36872, 21225, 31523, 49552, 35970,</pre>
+<pre id="Perry1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,46231, 34830, 7145, 46229, 14849, 14193, 27355, 12534,
+			2013,15548, 23009, 18095, 22114, 20741, 6929, 20417, 11660,
+			2014,26197, 11378, 31746, 43599, 27838, 13612, 29481, 48392,
+			2015,39407, 34768, 17930, 28763, 25771, 14852, 49552, 30054,
+			2016,10673, 4567, 34458, 3252, 9250, 43469, 27664, 30571,</pre>
+<pre id="Pike1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,33769, 48707, 37464, 11357, 32952, 21763, 20994, 27840,
+			2013,23883, 45007, 39235, 13915, 48958, 40994, 40384, 8721,
+			2014,43790, 6379, 13674, 39325, 47468, 21844, 17729, 42309,
+			2015,19437, 6864, 20603, 35124, 9807, 27552, 5552, 33452,
+			2016,36635, 11790, 31558, 35992, 12818, 13992, 8419, 11815,</pre>
+<pre id="Porter1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,15703, 33952, 42031, 21700, 11640, 15742, 11224, 45270,
+			2013,9012, 13274, 38710, 40632, 48156, 21448, 43587, 4949,
+			2014,17861, 40573, 39923, 10932, 15936, 47762, 17778, 2813,
+			2015,3430, 19065, 5948, 24143, 21054, 25526, 12810, 38278,
+			2016,24152, 48877, 28643, 31774, 23617, 38961, 29502, 20373,</pre>
+<pre id="Posey1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,6551, 7718, 32370, 10791, 35382, 26850, 28992, 19573,
+			2013,19070, 44910, 15601, 6867, 29612, 16236, 9888, 9596,
+			2014,38427, 36041, 15132, 39897, 36678, 43196, 48821, 47791,
+			2015,29927, 37479, 18989, 22002, 18034, 48660, 46531, 26234,
+			2016,35872, 28605, 14144, 44785, 6403, 24188, 4448, 13391,</pre>
+<pre id="Pulaski1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,30121, 35661, 5297, 26633, 11211, 4418, 10315, 29646,
+			2013,31440, 9171, 9967, 31068, 28429, 49816, 24937, 31041,
+			2014,12570, 49352, 22319, 34375, 48845, 45588, 8897, 35946,
+			2015,16686, 49864, 30568, 26630, 22432, 23553, 15092, 11074,
+			2016,4625, 10236, 3294, 26559, 39421, 44506, 7824, 25595,</pre>
+<pre id="Putnam1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,7409, 9879, 36346, 46432, 33882, 30108, 11684, 23789,
+			2013,49105, 43698, 27937, 7756, 32979, 29803, 3197, 22619,
+			2014,43345, 28863, 23487, 4403, 33225, 32534, 17964, 33794,
+			2015,11786, 39190, 48761, 18100, 3794, 29463, 45819, 13311,
+			2016,8084, 11254, 49243, 19219, 6391, 17694, 36059, 45574,</pre>
+<pre id=" Randolph1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,29463, 5974, 23706, 23349, 9044, 46524, 18057, 21556,
+			2013,14705, 47265, 13998, 47498, 44896, 20827, 47017, 14329,
+			2014,23196, 33644, 12103, 19665, 17316, 7427, 4317, 9426,
+			2015,11489, 33369, 37531, 25032, 10009, 3360, 17361, 31571,
+			2016,31679, 47504, 4574, 48944, 32544, 32979, 49115, 18684,</pre>
+<pre id=" Ripley1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,12212, 17905, 14393, 7970, 38903, 22674, 21716, 38830,
+			2013,49764, 24958, 41005, 18475, 5983, 42926, 4253, 24302,
+			2014,15138, 27318, 29825, 30180, 41562, 48499, 35713, 24632,
+			2015,34281, 44796, 21532, 48217, 8473, 35325, 47684, 7980,
+			2016,34671, 46590, 39000, 41672, 25433, 33489, 20937, 12690,</pre>
+<pre id=" Rush1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,25870, 35581, 14436, 45970, 12417, 30129, 45399, 26355,
+			2013,42026, 43591, 35541, 17602, 45578, 13528, 26194, 45093,
+			2014,37003, 42984, 31670, 39950, 17294, 44740, 37114, 39360,
+			2015,45734, 4452, 32629, 36100, 6375, 47095, 46052, 5285,
+			2016,37216, 28333, 17417, 24029, 24015, 42368, 34361, 22002,</pre>
+		
+<pre id=" Scott1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,32106, 27630, 15766, 18274, 5923, 9590, 4158, 20116,
+			2013,49297, 8101, 42228, 16768, 27077, 25566, 9041, 38673,
+			2014,20429, 14514, 42238, 11226, 19914, 3331, 6903, 17194,
+			2015,11058, 17068, 10298, 22257, 29225, 23740, 11336, 17241,
+			2016,40426, 27975, 25596, 7054, 4804, 22955, 40135, 23818,</pre>
+		
+<pre id=" Shelby1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,6783, 3327, 21802, 12252, 14790, 41480, 34010, 27832,
+			2013,47185, 36081, 42710, 15947, 4848, 25422, 49689, 30394,
+			2014,4377, 5861, 14403, 28416, 12159, 18925, 8040, 29910,
+			2015,40025, 7480, 15090, 38502, 6831, 30029, 45185, 4644,
+			2016,340110, 20336, 22841, 28623, 41066, 17123, 25028, 23105,</pre>
+		
+<pre id=" Spencer1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,21123, 10816, 13535, 39868, 22290, 15826, 38245, 17488,
+			2013,43902, 33064, 12963, 44084, 28328, 36246, 49512, 5802,
+			2014,39330, 48711, 10610, 11519, 24790, 19729, 35376, 38408,
+			2015,21300, 4010, 32143, 14489, 6026, 24121, 26984, 36448,
+			2016,8106, 5892, 20480, 25181, 4508, 11630, 11177, 49759,</pre>
+		
+<pre id=" St. Joseph1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,44320, 17326, 13955, 17045, 35845, 11576, 38572, 48127,
+			2013,39780, 19241, 44535, 46391, 27499, 21410, 48759, 7267,
+			2014,31700, 22945, 32962, 26951, 4906, 15645, 11733, 26915,
+			2015,48749, 45934, 18239, 15577, 43026, 5848, 49525, 37261,
+			2016,4732, 48327, 44603, 35233, 40724, 49839, 24708, 35655,</pre>
+		
+<pre id=" Starke1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,39146, 47846, 46486, 28283, 37726, 23809, 34999, 37013,
+			2013,29362, 16530, 17838, 32714, 15316, 14709, 25394, 15566,
+			2014,12950, 20923, 45109, 21290, 45960, 8880, 21067, 23470,
+			2015,43226, 9294, 25889, 43585, 34688, 34167, 32132, 12139,
+			2016,30960, 18019, 27957, 17199, 17599, 48707, 13109, 44797,</pre>
+		
+<pre id=" Steuben1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,33615, 25068, 35694, 46354, 3078, 18222, 46376, 49057,
+			2013,47981, 37938, 7011, 42376, 39273, 42254, 20410, 21094,
+			2014,28503, 48573, 46560, 39945, 24857, 42258, 27575, 13791,
+			2015,33706, 45212, 42163, 41319, 25577, 17047, 19583, 4894,
+			2016,47842, 24156, 37009, 32355, 45245, 30406, 10597, 9690,</pre>
+		
+<pre id=" Sullivan1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,6239, 39182, 31001, 44908, 37863, 35539, 9183, 32876,
+			2013,16951, 21873, 15831, 43174, 12589, 26172, 28770, 10314,
+			2014,30950, 43183, 40261, 38539, 40415, 29434, 25417, 25497,
+			2015,8151, 15978, 37422, 30698, 16289, 12588, 40246, 25441,
+			2016,15221, 27103, 42013, 33263, 23382, 19619, 31203, 4494,</pre>
+		
+<pre id=" Switzerland1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,23379, 9444, 41403, 4842, 25725, 9594, 47386, 3478,
+			2013,15307, 44208, 19020, 35618, 28755, 6115, 26628, 23264,
+			2014,36961, 35306, 16774, 19616, 11395, 9916, 31789, 46679,
+			2015,10430, 14389, 44947, 3209, 42859, 31267, 39716, 15048,
+			2016,7068, 34069, 9585, 41143, 46574, 32622, 41141, 14682,</pre>		
+<pre id=" Tippecanoe1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,48664, 28637, 33569, 36983, 11650, 44613, 48134, 46708,
+			2013,12905, 48256, 16467, 46790, 17264, 41173, 15175, 35342,
+			2014,19139, 4842, 23394, 18106, 30503, 7455, 7786, 38542,
+			2015,8182, 42119, 3187, 27307, 32599, 16665, 32386, 19097,
+			2016,8244, 34618, 4446, 31785, 24352, 9448, 10763, 42094,</pre>		
+<pre id=" Tipton1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,46994, 30867, 21918, 17703, 30643, 30361, 40024, 29553,
+			2013,27769, 17929, 31527, 14841, 32313, 32873, 17900, 19521,
+			2014,25152, 11676, 20393, 20680, 10000, 13605, 14031, 18894,
+			2015,22835, 32033, 22094, 15867, 13611, 46938, 39424, 29269,
+			2016,46577, 29717, 25895, 44000, 10255, 38042, 33389, 21991,</pre>
+		
+<pre id=" Union1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,9308, 39894, 25717, 18816, 37784, 9831, 23451, 32127,
+			2013,49193, 49649, 32381, 32288, 12700, 35123, 34686, 14481,
+			2014,5878, 36527, 15399, 37864, 40288, 30340, 40116, 18353,
+			2015,33390, 30712, 28864, 38374, 41935, 7579, 44582, 35492,
+			2016,7893, 7318, 39365, 41689, 31126, 16829, 35462, 3412,</pre>
+		
+<pre id=" Vanderburgh1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,29013, 39546, 43333, 14967, 19603, 46626, 24958, 12096,
+			2013,34577, 19605, 45366, 36562, 3948, 19590, 14370, 29149,
+			2014,5442, 29384, 6396, 29098, 14273, 12071, 5814, 47967,
+			2015,36240, 24356, 27296, 43178, 9434, 25589, 12153, 13541,
+			2016,32659, 32786, 20837, 38677, 21567, 12089, 37584, 32522,</pre>
+		
+<pre id=" Vermillion1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,17200, 8484, 49075, 7097, 29282, 13158, 3755, 21643,
+			2013,39145, 32480, 18204, 49905, 31624, 39677, 42381, 20449,
+			2014,19973, 19082, 10714, 49047, 18058, 20661, 4157, 10047,
+			2015,10152, 16120, 23316, 13424, 23850, 49783, 44430, 7379,
+			2016,29042, 43922, 21026, 19982, 48469, 24955, 31605, 16068,</pre>
+		
+<pre id=" Vigo1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,6775, 34326, 8130, 40820, 11075, 43332, 12418, 34424,
+			2013,26527, 23322, 21757, 31302, 26408, 27011, 17143, 12448,
+			2014,17018, 32937, 18046, 42332, 28475, 35246, 27099, 23189,
+			2015,6322, 49072, 15910, 33602, 4226, 34304, 47775, 20345,
+			2016,46030, 47404, 15986, 44910, 16834, 14508, 38047, 9406,</pre>
+		
+<pre id=" Wabash1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,31197, 12185, 40882, 38783, 39905, 11772, 32330, 4567,
+			2013,12746, 34469, 26679, 33935, 26811, 18020, 41878, 38425,
+			2014,30250, 40939, 37358, 43872, 20310, 6125, 47775, 6860,
+			2015,30413, 19940, 17835, 22354, 48862, 25797, 23050, 35545,
+			2016,19045, 22640, 45878, 44928, 6601, 11011, 11099, 34913,</pre>
+		
+<pre id=" Warren1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,40211, 24197, 25014, 4168, 5909, 14312, 24157, 11038,
+			2013,46010, 7949, 13772, 19992, 26894, 9272, 16633, 32597,
+			2014,29201, 20343, 19021, 31294, 40302, 48154, 9159, 25376,
+			2015,34893, 10579, 25214, 34427, 13711, 44005, 25213, 13802,
+			2016,25294, 37182, 26946, 8624, 20509, 30140, 35441, 48848,</pre>
+		
+<pre id=" Washington1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,42975, 30572, 44276, 6402, 37573, 3384, 46119, 11907,
+			2013,23074, 45223, 24593, 28268, 41100, 24083, 42158, 42097,
+			2014,46434, 34990, 17639, 48881, 7900, 34214, 39383, 18376,
+			2015,16414, 9357, 3507, 6108, 25656, 21462, 6761, 16661,
+			2016,30169, 21558, 15455, 13629, 44845, 18445, 10632, 38029,</pre>
+<pre id=" Wayne1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,35839, 21836, 35805, 26728, 39464, 12795, 19660, 44127,
+			2013,38132, 11317, 14520, 40093, 3419, 15182, 45419, 8855,
+			2014,30389, 37822, 21665, 20909, 24159, 36148, 30638, 6631,
+			2015,4926, 15351, 14134, 44346, 38580, 24253, 47115, 44239,
+			2016,31328, 14012, 34679, 25989, 5218, 11499, 44543, 44015,</pre>
+<pre id=" Wells1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,36959, 44519, 41412, 7060, 35360, 29238, 4759, 38634,
+			2013,42622, 13355, 39301, 46817, 13130, 12262, 22210, 38543,
+			2014,25053, 36782, 28922, 19270, 6548, 4391, 40319, 49451,
+			2015,33448, 41852, 9927, 22992, 5613, 47014, 7639, 18456,
+			2016,37045, 44650, 9272, 6452, 43297, 12281, 41415, 16929,</pre>
+<pre id=" White1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,32271, 28472, 28494, 24348, 39423, 6624, 18038, 25392,
+			2013,25845, 48382, 36819, 22109, 42886, 49101, 48072, 17377,
+			2014,46491, 40610, 12304, 39168, 15609, 12738, 39356, 44664,
+			2015,10543, 41278, 41135, 37538, 24641, 22410, 46272, 43622,
+			2016,45427, 23326, 37899, 41360, 31659, 22978, 27964, 35308,</pre>
+<pre id=" Whitley1" style="display:none">Year,american indian or alaskan native,black,black(non-hispanic),caucasian,hispanic,not provided,other race or ethnicity,white(non-hispanic)
+			2012,25292, 42817, 15761, 20316, 29048, 25574, 37865, 47391,
+			2013,11751, 9752, 8898, 13947, 30860, 45849, 5945, 5871,
+			2014,10564, 37746, 33760, 40704, 10962, 23256, 25648, 44768,
+			2015,16097, 42046, 18093, 31875, 34685, 20767, 32778, 16461,
+			2016,22159, 10007, 5051, 30137, 47357, 3594, 48941, 42947,</pre>		
+		
+		
+</div>
+
+
+
+
+
+</head>
+<body>
+
+
+<input class="button" type="button" value="Back"onclick="location.href='genderrace.html'"/>
+
+
+
+<script language = "JavaScript">
+//$(function () {
+        //$('#container').highcharts({
+		
+		
+	 var dataOptions = {chart: {renderTo: 'container1', type: 'column'},
+						title: {text: 'Total claims based on gender and race'},
+
+
+
+						subtitle: {text: 'Select county from Dropdown list'},
+						data: {csv: document.getElementById('Adams').innerHTML},
+						exporting: {enabled: false},
+						credits: {enabled: false},
+	                    plotOptions: {column: {stacking: 'normal', marker: {enabled: false}}},
+						series: [{lineWidth:0.8}, {color: '#3dd73a', negativeColor: '#076388', fillOpacity: 0.5}]
+						}
+	var chart = new Highcharts.Chart(dataOptions);
+		
+
+
+
+$("#chartType").change(function() {
+  var selVal = $("#chartType").val();
+  
+ 
+  if (selVal == '0' || selVal == 'Adams') {
+    dataOptions.data = {
+      csv: document.getElementById('Adams').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Bartholomew') {
+    dataOptions.data = {
+      csv: document.getElementById('Bartholomew').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Allen') {
+    dataOptions.data = {
+      csv: document.getElementById('Allen').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Benton') {
+    dataOptions.data = {
+      csv: document.getElementById('Benton').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Blackford') {
+    dataOptions.data = {
+      csv: document.getElementById('Blackford').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Boone') {
+    dataOptions.data = {
+      csv: document.getElementById('Boone').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Brown') {
+    dataOptions.data = {
+      csv: document.getElementById('Brown').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Carroll') {
+    dataOptions.data = {
+      csv: document.getElementById('Carroll').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Cass') {
+    dataOptions.data = {
+      csv: document.getElementById('Cass').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Clark') {
+    dataOptions.data = {
+      csv: document.getElementById('Clark').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Clay') {
+    dataOptions.data = {
+      csv: document.getElementById('Clay').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Clinton') {
+    dataOptions.data = {
+      csv: document.getElementById('Clinton').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Crawford') {
+    dataOptions.data = {
+      csv: document.getElementById('Crawford').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Daviess') {
+    dataOptions.data = {
+      csv: document.getElementById('Daviess').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Dearborn') {
+    dataOptions.data = {
+      csv: document.getElementById('Dearborn').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Decatur') {
+    dataOptions.data = {
+      csv: document.getElementById('Decatur').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'DeKalb') {
+    dataOptions.data = {
+      csv: document.getElementById('DeKalb').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Delaware') {
+    dataOptions.data = {
+      csv: document.getElementById('Delaware').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Dubois') {
+    dataOptions.data = {
+      csv: document.getElementById('Dubois').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Elkhart') {
+    dataOptions.data = {
+      csv: document.getElementById('Elkhart').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Fayette') {
+    dataOptions.data = {
+      csv: document.getElementById('Fayette').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Floyd') {
+    dataOptions.data = {
+      csv: document.getElementById('Floyd').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Fountain') {
+    dataOptions.data = {
+      csv: document.getElementById('Fountain').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Minnesota') {
+    dataOptions.data = {
+      csv: document.getElementById('Minnesota').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Franklin') {
+    dataOptions.data = {
+      csv: document.getElementById('Franklin').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Fulton') {
+    dataOptions.data = {
+      csv: document.getElementById('Fulton').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Gibson') {
+    dataOptions.data = {
+      csv: document.getElementById('Gibson').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Grant') {
+    dataOptions.data = {
+      csv: document.getElementById('Grant').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Greene') {
+    dataOptions.data = {
+      csv: document.getElementById('Greene').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Hamilton') {
+    dataOptions.data = {
+      csv: document.getElementById('Hamilton').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Hancock') {
+    dataOptions.data = {
+      csv: document.getElementById('Hancock').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Harrison') {
+    dataOptions.data = {
+      csv: document.getElementById('Harrison').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Hendricks') {
+    dataOptions.data = {
+      csv: document.getElementById('Hendricks').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Henry') {
+    dataOptions.data = {
+      csv: document.getElementById('Henry').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Howard') {
+    dataOptions.data = {
+      csv: document.getElementById('Howard').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Huntington') {
+    dataOptions.data = {
+      csv: document.getElementById('Huntington').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Jackson') {
+    dataOptions.data = {
+      csv: document.getElementById('Jackson').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Oregon') {
+    dataOptions.data = {
+      csv: document.getElementById('Oregon').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Jasper') {
+    dataOptions.data = {
+      csv: document.getElementById('Jasper').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Jay') {
+    dataOptions.data = {
+      csv: document.getElementById('Jay').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Jefferson') {
+    dataOptions.data = {
+      csv: document.getElementById('Jefferson').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Jennings') {
+    dataOptions.data = {
+      csv: document.getElementById('Jennings').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Johnson') {
+    dataOptions.data = {
+      csv: document.getElementById('Johnson').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Knox') {
+    dataOptions.data = {
+      csv: document.getElementById('Knox').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Kosciusko') {
+    dataOptions.data = {
+      csv: document.getElementById('Kosciusko').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'LaGrange') {
+    dataOptions.data = {
+      csv: document.getElementById('LaGrange').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Lake') {
+    dataOptions.data = {
+      csv: document.getElementById('Lake').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'LaPorte') {
+    dataOptions.data = {
+      csv: document.getElementById('LaPorte').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Lawrence') {
+    dataOptions.data = {
+      csv: document.getElementById('Lawrence').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Madison') {
+    dataOptions.data = {
+      csv: document.getElementById('Madison').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Marion') {
+    dataOptions.data = {
+      csv: document.getElementById('Marion').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Marshall') {
+    dataOptions.data = {
+      csv: document.getElementById('Marshall').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Martin') {
+    dataOptions.data = {
+      csv: document.getElementById('Martin').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Miami') {
+    dataOptions.data = {
+      csv: document.getElementById('Miami').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Monroe') {
+    dataOptions.data = {
+      csv: document.getElementById('Monroe').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Montgomery') {
+    dataOptions.data = {
+      csv: document.getElementById('Montgomery').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Morgan') {
+    dataOptions.data = {
+      csv: document.getElementById('Morgan').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Newton') {
+    dataOptions.data = {
+      csv: document.getElementById('Newton').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Noble') {
+    dataOptions.data = {
+      csv: document.getElementById('Noble').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Ohio') {
+    dataOptions.data = {
+      csv: document.getElementById('Ohio').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Orange') {
+    dataOptions.data = {
+      csv: document.getElementById('Orange').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Owen') {
+    dataOptions.data = {
+      csv: document.getElementById('Owen').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Parke') {
+    dataOptions.data = {
+      csv: document.getElementById('Parke').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Perry') {
+    dataOptions.data = {
+      csv: document.getElementById('Perry').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Pike') {
+    dataOptions.data = {
+      csv: document.getElementById('Pike').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Porter') {
+    dataOptions.data = {
+      csv: document.getElementById('Porter').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Posey') {
+    dataOptions.data = {
+      csv: document.getElementById('Posey').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Pulaski') {
+    dataOptions.data = {
+      csv: document.getElementById('Pulaski').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Putnam') {
+    dataOptions.data = {
+      csv: document.getElementById('Putnam').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Randolph') {
+    dataOptions.data = {
+      csv: document.getElementById('Randolph').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Ripley') {
+    dataOptions.data = {
+      csv: document.getElementById('Ripley').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Rush') {
+    dataOptions.data = {
+      csv: document.getElementById('Rush').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Scott') {
+    dataOptions.data = {
+      csv: document.getElementById('Scott').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Shelby') {
+    dataOptions.data = {
+      csv: document.getElementById('Shelby').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Spencer') {
+    dataOptions.data = {
+      csv: document.getElementById('Spencer').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'St. Joseph') {
+    dataOptions.data = {
+      csv: document.getElementById('St. Joseph').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Starke') {
+    dataOptions.data = {
+      csv: document.getElementById('Starke').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Steuben') {
+    dataOptions.data = {
+      csv: document.getElementById('Steuben').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Sullivan') {
+    dataOptions.data = {
+      csv: document.getElementById('Sullivan').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Switzerland') {
+    dataOptions.data = {
+      csv: document.getElementById('Switzerland').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Tippecanoe') {
+    dataOptions.data = {
+      csv: document.getElementById('Tippecanoe').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Tipton') {
+    dataOptions.data = {
+      csv: document.getElementById('Tipton').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Tippecanoe') {
+    dataOptions.data = {
+      csv: document.getElementById('Tippecanoe').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Union') {
+    dataOptions.data = {
+      csv: document.getElementById('Union').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Vanderburgh') {
+    dataOptions.data = {
+      csv: document.getElementById('Vanderburgh').innerHTML
+    }
+
+  }else if (selVal == '0' || selVal == 'Vermillion') {
+    dataOptions.data = {
+      csv: document.getElementById('Vermillion').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Vigo') {
+    dataOptions.data = {
+      csv: document.getElementById('Vigo').innerHTML
+    }
+
+  }else if (selVal == '0' || selVal == 'Wabash') {
+    dataOptions.data = {
+      csv: document.getElementById('Wabash').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Warren') {
+    dataOptions.data = {
+      csv: document.getElementById('Warren').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Washington') {
+    dataOptions.data = {
+      csv: document.getElementById('Washington').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Wayne') {
+    dataOptions.data = {
+      csv: document.getElementById('Wayne').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'Wells') {
+    dataOptions.data = {
+      csv: document.getElementById('Wells').innerHTML
+    }
+  }else if (selVal == '0' || selVal == 'White') {
+    dataOptions.data = {
+      csv: document.getElementById('White').innerHTML
+    }
+   }else if (selVal == '0' || selVal == 'Whitley') {
+    dataOptions.data = {
+      csv: document.getElementById('Whitley').innerHTML
+    }
+
+  }else {
+    dataOptions.data = {
+      csv: document.getElementById('Adams').innerHTML
+    }
+  }
+  
+  var chart = new Highcharts.Chart(dataOptions);
+ 
+    
+  
+});
+		
+           
+       // });
+    //});
+    
+//$(function () {
+        //$('#container2').highcharts({
+            var dataOptions2 = {chart: {renderTo: 'container2', type: 'column'},
+						title: {text: 'Claims based on Race and Gender'},
+						subtitle: {text: 'Select county from Dropdown List'},
+						data: {csv: document.getElementById('Adams1').innerHTML},
+						exporting: {enabled: false},
+						
+						credits: {enabled: false},
+						plotOptions: {column: {stacking: 'normal', marker: {enabled: false}}},
+						series: [{lineWidth: 1}, {color: '#c4392d', negativeColor: '#5679c4', fillOpacity: 0.5}]
+						}
+var chart = new Highcharts.Chart(dataOptions2);
+
+	$("#chartType").change(function() {
+	var selVal = $("#chartType").val();
+	if 		(selVal == '0' || selVal == 'Adams') {dataOptions2.data = {csv: document.getElementById('Adams1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Allen') {dataOptions2.data = {csv: document.getElementById('Allen1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Bartholomew') {dataOptions2.data = {csv: document.getElementById('Bartholomew1').innerHTML}} 
+	else if (selVal == '0' || selVal == 'Benton') {dataOptions2.data = {csv: document.getElementById('Benton1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Blackford') {dataOptions2.data = {csv: document.getElementById('Blackford1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Boone') {dataOptions2.data = {csv: document.getElementById('Boone1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Brown') {dataOptions2.data = {csv: document.getElementById('Brown1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Carroll') {dataOptions2.data = {csv: document.getElementById('Carroll1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Cass') {dataOptions2.data = {csv: document.getElementById('Cass1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Clark') {dataOptions2.data = {csv: document.getElementById('Clark1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Clay') {dataOptions2.data = {csv: document.getElementById('Clay1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Clinton') {dataOptions2.data = {csv: document.getElementById('Clinton1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Crawford') {dataOptions2.data = {csv: document.getElementById('Crawford1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Daviess') {dataOptions2.data = {csv: document.getElementById('Daviess1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Dearborn') {dataOptions2.data = {csv: document.getElementById('Dearborn1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Decatur') {dataOptions2.data = {csv: document.getElementById('Decatur1').innerHTML}}
+	else if (selVal == '0' || selVal == 'DeKalb') {dataOptions2.data = {csv: document.getElementById('DeKalb1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Delaware') {dataOptions2.data = {csv: document.getElementById('Delaware1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Dubois') {dataOptions2.data = {csv: document.getElementById('Dubois1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Elkhart') {dataOptions2.data = {csv: document.getElementById('Elkhart1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Fayette') {dataOptions2.data = {csv: document.getElementById('Fayette1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Floyd') {dataOptions2.data = {csv: document.getElementById('Floyd1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Fountain') {dataOptions2.data = {csv: document.getElementById('Fountain1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Minnesota') {dataOptions2.data = {csv: document.getElementById('Minnesota1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Franklin') {dataOptions2.data = {csv: document.getElementById('Franklin1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Fulton') {dataOptions2.data = {csv: document.getElementById('Fulton1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Gibson') {dataOptions2.data = {csv: document.getElementById('Gibson1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Grant') {dataOptions2.data = {csv: document.getElementById('Grant1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Greene') {dataOptions2.data = {csv: document.getElementById('Greene1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Hamilton') {dataOptions2.data = {csv: document.getElementById('Hamilton1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Hancock') {dataOptions2.data = {csv: document.getElementById('Hancock1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Harrison') {dataOptions2.data = {csv: document.getElementById('Harrison1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Hendricks') {dataOptions2.data = {csv: document.getElementById('Hendricks1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Henry') {dataOptions2.data = {csv: document.getElementById('Henry1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Howard') {dataOptions2.data = {csv: document.getElementById('Howard1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Huntington') {dataOptions2.data = {csv: document.getElementById('Huntington1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Jackson') {dataOptions2.data = {csv: document.getElementById('Jackson1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Oregon') {dataOptions2.data = {csv: document.getElementById('Oregon1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Jasper') {dataOptions2.data = {csv: document.getElementById('Jasper1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Jay') {dataOptions2.data = {csv: document.getElementById('Jay1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Jefferson') {dataOptions2.data = {csv: document.getElementById('Jefferson1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Jennings') {dataOptions2.data = {csv: document.getElementById('Jennings1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Johnson') {dataOptions2.data = {csv: document.getElementById('Johnson1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Knox') {dataOptions2.data = {csv: document.getElementById('Knox1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Kosciusko') {dataOptions2.data = {csv: document.getElementById('Kosciusko1').innerHTML}}
+	else if (selVal == '0' || selVal == 'LaGrange') {dataOptions2.data = {csv: document.getElementById('LaGrange1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Lake') {dataOptions2.data = {csv: document.getElementById('Lake1').innerHTML}}
+	else if (selVal == '0' || selVal == 'LaPorte') {dataOptions2.data = {csv: document.getElementById('LaPorte1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Lawrence') {dataOptions2.data = {csv: document.getElementById('Lawrence1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Madison') {dataOptions2.data = {csv: document.getElementById('Madison1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Marion') {dataOptions2.data = {csv: document.getElementById('Marion1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Marshall') {dataOptions2.data = {csv: document.getElementById('Marshall1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Martin') {dataOptions2.data = {csv: document.getElementById('Martin1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Miami') {dataOptions2.data = {csv: document.getElementById('Miami1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Monroe') {dataOptions2.data = {csv: document.getElementById('Monroe1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Montgomery') {dataOptions2.data = {csv: document.getElementById('Montgomery1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Morgan') {dataOptions2.data = {csv: document.getElementById('Morgan1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Newton') {dataOptions2.data = {csv: document.getElementById('Newton1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Noble') {dataOptions2.data = {csv: document.getElementById('Noble1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Ohio') {dataOptions2.data = {csv: document.getElementById('Ohio1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Orange') {dataOptions2.data = {csv: document.getElementById('Orange1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Owen') {dataOptions2.data = {csv: document.getElementById('Owen1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Parke') {dataOptions2.data = {csv: document.getElementById('Parke1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Perry') {dataOptions2.data = {csv: document.getElementById('Perry1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Pike') {dataOptions2.data = {csv: document.getElementById('Pike1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Porter') {dataOptions2.data = {csv: document.getElementById('Porter1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Posey') {dataOptions2.data = {csv: document.getElementById('Posey1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Pulaski') {dataOptions2.data = {csv: document.getElementById('Pulaski1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Putnami') {dataOptions2.data = {csv: document.getElementById('Putnam1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Randolph') {dataOptions2.data = {csv: document.getElementById('Randolph1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Ripley') {dataOptions2.data = {csv: document.getElementById('Ripley1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Rush') {dataOptions2.data = {csv: document.getElementById('Rush1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Scott') {dataOptions2.data = {csv: document.getElementById('Scott1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Shelby') {dataOptions2.data = {csv: document.getElementById('Shelby1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Spencer') {dataOptions2.data = {csv: document.getElementById('Spencer1').innerHTML}}
+	else if (selVal == '0' || selVal == 'St. Joseph') {dataOptions2.data = {csv: document.getElementById('St. Joseph1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Starke') {dataOptions2.data = {csv: document.getElementById('Starke1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Starke') {dataOptions2.data = {csv: document.getElementById('Starke1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Steuben') {dataOptions2.data = {csv: document.getElementById('Steuben1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Sullivan') {dataOptions2.data = {csv: document.getElementById('Sullivan1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Switzerland') {dataOptions2.data = {csv: document.getElementById('Switzerland1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Tippecanoe') {dataOptions2.data = {csv: document.getElementById('Tippecanoe1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Tipton') {dataOptions2.data = {csv: document.getElementById('Tipton1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Union') {dataOptions2.data = {csv: document.getElementById('Union1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Vanderburgh') {dataOptions2.data = {csv: document.getElementById('Vanderburgh1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Vermillion') {dataOptions2.data = {csv: document.getElementById('Vermillion1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Vigo') {dataOptions2.data = {csv: document.getElementById('Vigo1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Wabash') {dataOptions2.data = {csv: document.getElementById('Wabash1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Warren') {dataOptions2.data = {csv: document.getElementById('Warren1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Warrick') {dataOptions2.data = {csv: document.getElementById('Warrick1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Washington') {dataOptions2.data = {csv: document.getElementById('Washington1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Wayne') {dataOptions2.data = {csv: document.getElementById('Wayne1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Wells') {dataOptions2.data = {csv: document.getElementById('Wells1').innerHTML}}
+	else if (selVal == '0' || selVal == 'White') {dataOptions2.data = {csv: document.getElementById('White1').innerHTML}}
+	else if (selVal == '0' || selVal == 'Whitley') {dataOptions2.data = {csv: document.getElementById('Whitley1').innerHTML}}
+	else {dataOptions2.data = {csv: document.getElementById('Adams1').innerHTML}}
+	
+	var chart = new Highcharts.Chart(dataOptions2);
+	});
+       // });
+   // });
+ 
+
+    </script>
+
+
+   </body>
+   
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
